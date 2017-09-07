@@ -13,12 +13,13 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  agent_msgs
 )
 
 catkin_package(
   INCLUDE_DIRS include
   #LIBRARIES utm_agents yaml-cpp
-  CATKIN_DEPENDS geometry_msgs nav_msgs roscpp rospy std_msgs # agent_msgs
+  CATKIN_DEPENDS geometry_msgs nav_msgs roscpp rospy std_msgs agent_msgs
   DEPENDS system_lib
 )
 
