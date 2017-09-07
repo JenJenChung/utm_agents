@@ -1,0 +1,41 @@
+utm_agents:
+  NNFile: /home/jchu2041/catkin_ws/src/utm_agents/6_Sectors12/net_0_
+  configFile: /home/jchu2041/catkin_ws/src/utm_agents/config_6_Sectors12.yaml
+  capacity:
+    agent0: 2
+    agent1: 2
+    agent2: 1
+    agent3: 1
+    agent4: 3
+    agent5: 3
+    agent6: 1
+    agent7: 1
+    agent8: 3
+    agent9: 3
+    agent10: 1
+    agent11: 1
+    agent12: 1
+    agent13: 1
+    agent14: 1
+    agent15: 1
+    agent16: 3
+    agent17: 3
+  length:
+    agent0: 5
+    agent1: 5
+    agent2: 3
+    agent3: 3
+    agent4: 5
+    agent5: 5
+    agent6: 3
+    agent7: 3
+    agent8: 5
+    agent9: 5
+    agent10: 1
+    agent11: 1
+    agent12: 3
+    agent13: 3
+    agent14: 3
+    agent15: 3
+    agent16: 5
+    agent17: 5

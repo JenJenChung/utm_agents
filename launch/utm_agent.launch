@@ -1,0 +1,10 @@
+<launch>
+  <arg name="agentID"/>
+  <arg name="num_traffic"/>
+  <group ns="agent$(arg agentID)">
+    <node pkg="utm_agents" type="utm_agents" respawn="false" name="utm_agents" output="screen">
+      <param name="agentID" value="$(arg agentID)"/>
+      <param name="num_traffic" value="$(arg num_traffic)"/>
+    </node>
+  </group>
+</launch>
