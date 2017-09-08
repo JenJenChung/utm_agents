@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "Initializing UTM graph manager..."
+rosparam load $(rospack find utm_traffic)/launch/utm_agent_demo8_params.yaml
+sleep 5s
+rosrun utm_agents utm_manager &
+pid="$pid $!"
+
+echo "Launching agents..."
+rosparam load $(rospack find utm_agents)/launch/utm_agents_params.yaml &
+sleep 5s
+for i in `seq 0 17`;
+do
+  roslaunch utm_agents utm_agent.launch agentID:=$i num_traffic:=4&
+  pid="$pid $!"
+  sleep 2s
+done
+
+trap "echo Killing all processes.; kill -2 TERM $pid; exit" SIGINT SIGTERM
+
+echo "UTM active"
+
+sleep 24h
