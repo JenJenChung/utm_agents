@@ -142,7 +142,7 @@ void Agent::trafficCallback(const agent_msgs::AgentMembership& msg){
     int agentState = (int)robotNames.size() ; // total number of robots controlled by *this agent
     if (agentState >= linkCapacity){ // link at capacity, also bump up traversal time
       costs.wait = true ;
-      costs.traversal_time = traversalTime*((double)robotNames.size()+1.0) ;
+      costs.traversal_time = traversalTime ;//*((double)robotNames.size()+1.0) ;
       ROS_INFO_STREAM("Agent " << agentID << " at capacity of " << agentState << " robots!") ;
     }
     else{
